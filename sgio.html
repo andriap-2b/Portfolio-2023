@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/skins/color-1.css">
+    <title>sgio</title>
+    <style>
+      /* Styles CSS */
+      body {
+        font-family: 'Poppins'sans-serif;
+      }
+      .header {
+        padding: 20px;
+        text-align: center;
+      }
+      .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .photo {
+        margin-bottom: 20px;
+        width: 60%;
+      }
+      .photo img {
+        max-width: 100%;
+        height: auto;
+      }
+      .thumbnails {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .thumbnails img {
+        max-width: 50px;
+        height: auto;
+        margin: 0 5px;
+        opacity: 0.5;
+        cursor: pointer;
+      }
+      .thumbnails img.selected {
+        opacity: 1;
+      }
+    </style>
+    <script>
+      // JavaScript pour la liste déroulante
+      var images = [
+        'images/img-porfolio/1.jpg',
+        'images/img-porfolio/2.jpg',
+        'images/img-porfolio/3.jpg',
+        'images/img-porfolio/4.jpg',
+        'images/img-porfolio/5.jpg',
+        'images/img-porfolio/6.jpg',
+        'images/img-porfolio/7.jpg',
+        'images/img-porfolio/8.jpg',
+        'images/img-porfolio/9.jpg',
+        'images/img-porfolio/10.jpg',
+        'images/img-porfolio/11.jpeg'
+        
+      ];
+      var currentImageIndex = 0;
+      var imageTimer;
+  
+      function changeImage() {
+        var image = document.getElementById('image');
+        var thumbnails = document.getElementsByClassName('thumbnails')[0].getElementsByTagName('img');
+  
+        image.src = images[currentImageIndex];
+  
+        // Appliquer la classe 'selected' à l'image miniature correspondante
+        for (var i = 0; i < thumbnails.length; i++) {
+          if (i === currentImageIndex) {
+            thumbnails[i].classList.add('selected');
+          } else {
+            thumbnails[i].classList.remove('selected');
+          }
+        }
+  
+        // Passer à l'image suivante
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+      }
+  
+      // Démarrer le diaporama automatique
+      function startSlideshow() {
+        changeImage();
+        imageTimer = setInterval(changeImage, 3000); // Changement d'image toutes les 4 secondes
+      }
+  
+      // Arrêter le diaporama automatique
+      function stopSlideshow() {
+        clearInterval(imageTimer);
+      }
+    </script>
+  </head>
+
+  <body onload="startSlideshow()" onunload="stopSlideshow()">
+    <div class="header">
+        <img src="images/SGIO_Patch2023_Off.png" alt="" style="width: 8%; height: 8%; display: block; margin: 0 auto;">
+        <h1>Réalisation graphique personnelle au sein l'entreprise</h1>
+    </div>
+    <div class="content">
+      <div class="photo">
+        <img id="image" src="images/img-porfolio/1.jpg" alt="sgio">
+      </div>
+      <div class="thumbnails">
+        <img src="images/img-porfolio/1.jpg" alt="Image 1" onclick="currentImageIndex = 0; changeImage()" class="selected">
+        <img src="images/img-porfolio/2.jpg" alt="Image 2" onclick="currentImageIndex = 1; changeImage()">
+        <img src="images/img-porfolio/3.jpg" alt="Image 3" onclick="currentImageIndex = 2; changeImage()">
+        <img src="images/img-porfolio/4.jpg" alt="Image 4" onclick="currentImageIndex = 3; changeImage()">
+        <img src="images/img-porfolio/5.jpg" alt="Image 5" onclick="currentImageIndex = 4; changeImage()">
+        <img src="images/img-porfolio/6.jpg" alt="Image 6" onclick="currentImageIndex = 5; changeImage()">
+        <img src="images/img-porfolio/7.jpg" alt="Image 6" onclick="currentImageIndex = 6; changeImage()">
+        <img src="images/img-porfolio/8.jpg" alt="Image 8" onclick="currentImageIndex = 7; changeImage()">
+        <img src="images/img-porfolio/9.jpg" alt="Image 9" onclick="currentImageIndex = 8; changeImage()">
+        <img src="images/img-porfolio/10.jpg" alt="Image 10" onclick="currentImageIndex = 9; changeImage()">
+        <img src="images/img-porfolio/11.jpeg" alt="Image 11" onclick="currentImageIndex = 10; changeImage()">
+    </div>
+</div>
+<a href="/" class="btn">Retour à la page d'accueil</a>
+
+
+</body>
+</html>
+        
+  
