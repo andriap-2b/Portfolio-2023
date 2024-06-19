@@ -32,11 +32,10 @@
             </div>
             <ul class="nav">
                 <li><a href="#home" class=""><i class="fa fa-home"></i>Accueil</a></li>
-                <li><a href="#about"><i class="fa fa-user"></i>À Propos</a></li>
                 <li><a href="#services"><i class="fa fa-list"></i>Compétences</a></li>
                 <li><a href="#gallery"><i class="fa fa-camera"></i>Photographie</a></li>
                 <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Graphisme</a></li>
-                <li><a href="#contact"><i class="fa fa-comments"></i> Réseaux Sociaux</a></li>
+                <li><a href="#contact"><i class="fa fa-comments"></i> Réseaux sociaux</a></li>
             </ul>
         </div>
         <!--Aside End-->
@@ -61,17 +60,26 @@
                                 Ce sont des passions que j’ai découvert il y a déjà plusieurs années et elles m’animent
                                 tous les jours. J’adore créer toutes sortes de choses, des choses qui m’ont fait vibrer
                                 étant plus jeune.
+                                
                             </p>
 
                         </div>
                         <div class="home-img padd-15">
                             <img src="images/107.jpg" alt="">
                         </div>
+
+                        <div class="row">
+                            <div class="buttons padd-15">
+                                <a href="images/cv.jpg" class="btn">CV</a>
+                                <a href="mailto:apiercecchidesign@gmail.com" class="btn hire-me">Contact</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             <!-- Home Section End -->
-            <!-- About Section Start -->
+
+            <!-- About Section Start 
             <section class="about section" id='about'>
                 <div class="container">
                     <div class="row">
@@ -131,7 +139,7 @@
                                     <div class="row">
                                         <div class="buttons padd-15">
                                             <a href="images/cv.jpg" class="btn">Télécharger le CV</a>
-                                            <a href="mailto:andria.piercecchi@gmail.com" class="btn hire-me">Contact</a>
+                                            <a href="mailto:apiercecchidesign@gmail.com" class="btn hire-me">Contact</a>
                                         </div>
                                     </div>
                                 </div>
@@ -141,7 +149,13 @@
                     </div>
                 </div>
             </section>
-            <!-- About Section End -->
+            About Section End -->
+
+
+            <!-- defile Section Start -->
+
+            <!-- defile Section End -->
+
             <!-- Services Section Start -->
             <section class="service section" id="services">
                 <div class="container">
@@ -240,18 +254,24 @@
                             flex-wrap: wrap;
                             justify-content: space-between;
                         }
-                
+
                         .photo {
                             width: calc(25% - 10px);
                             margin: 5px;
                             box-sizing: border-box;
                             object-fit: cover;
                         }
+
+                        @media only screen and (max-width: 600px) {
+                            .photo {
+                                width: calc(50% - 10px);
+                            }
+                        }
                     </style>
-    
+
                     <div id="gallery">
                         <img class="photo" src="photo1.jpg" alt="Photo 1">
-    
+
                         <img class="photo" src="photo3.jpg" alt="Photo 3">
                         <img class="photo" src="photo4.jpg" alt="Photo 4">
                         <img class="photo" src="photo5.jpg" alt="Photo 5">
@@ -261,7 +281,7 @@
                         <img class="photo" src="photo9.jpg" alt="Photo 9">
                         <img class="photo" src="photo10.jpg" alt="Photo 10">
                         <img class="photo" src="photo11.jpg" alt="Photo 11">
-                      
+
                         <img class="photo" src="photo13.jpg" alt="Photo 13">
                         <img class="photo" src="photo14.jpg" alt="Photo 14">
                         <img class="photo" src="photo15.jpg" alt="Photo 15">
@@ -285,11 +305,7 @@
                             <h2>GRAPHISME</h2>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="portfolio-heading padd-15">
-                            <h2>Mes derniers projets :</h2>
-                        </div>
-                    </div>
+                    
                     <div class="row">
                         <!-- portfolio item start -->
                         <div class="portfolio-item padd-15">
@@ -362,7 +378,8 @@
                         </div>
                     </div>
                     <a href="sgio.html">
-                        <img src="images/SGIO_Patch2023_Off.png" alt="sgio" style="width: 20%; height: 20%; display: block; margin: 0 auto; color: var(--text-black-900);">
+                        <img src="images/SGIO_Patch2023_Off.png" alt="sgio"
+                            style="width: 20%; height: 20%; display: block; margin: 0 auto; color: var(--text-black-900);">
                     </a>
                 </div>
             </section>
@@ -438,7 +455,7 @@
     <!-- Main Content End-->
     </div>
     <!-- Main Container End-->
-    <!-- Style switcher start -->
+    <!-- Style switcher start
     <div class="style-switcher">
         <div class="style-switcher-toggler s-icon">
             <i class="fas fa-cog"></i>
@@ -455,7 +472,7 @@
             <span class="color-5" onclick="setActiveStyle('color-5')"></span>
         </div>
     </div>
-    <!-- Style switcher end -->
+     Style switcher end -->
     <!-- JS Files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer">
     </script>
